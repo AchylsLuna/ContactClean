@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-transform: capitalize;
+            transition: all .2s linear;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(90deg, #47d3d3 60%, #145665 40.1%);
+        }
+
+        .container form {
+            padding: 20px;
+            width: 700px;
+            max-width: 90%; /* Adjusted to make the container bigger */
+            background: #72b0cf;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+            text-align: center; /* Center the content horizontally */
+        }
+
+        .container form .head {
+            font-size: 30px;
+            color: #fff;
+            padding-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .container form .button {
+            padding: 15px 30px; /* Adjusted to make the button bigger */
+            font-size: 24px; /* Adjusted to make the button text bigger */
+            background: #27ae60;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background .3s ease;
+            text-decoration: none;
+            display: inline-block; /* Ensures the button takes the size of its content */
+            margin-top: 20px; /* Adjusted to add some space between the header and the button */
+        }
+
+        .container form .button:hover {
+            background: #2ecc71;
+            border-radius: 10%;
+        }
+
+        @media only screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+    </style>
+</head>
+<body>
+<div class="container">
+    <form action="/" class="form">
+        <header class="head">Payment Successful</header>
+        <a href="/" class="button">Home</a>
+    </form>
+</div>
+</body>
+</html>

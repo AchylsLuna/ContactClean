@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(96, 204, 240); 
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 0;
+}
+
+.title {
+  font-size: 32px;
+  color: #fff;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 25px;
+  max-width: 1200px; /* maximum width to keep the grid centered */
+  margin: auto; /* Center the grid horizontally */
+}
+
+/*box ng mga shop*/
+.box {
+  display: flex;
+  flex-direction: column;
+  background: #72b0cf;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+  border-radius: 10px;
+  color: #333;
+}
+
+/*picture sa box ng shop*/
+.box img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/*laman ng box*/
+.box .content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/*header ng box*/
+.box .content h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+/*laman ulit ng box*/
+.box .content p {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+/*price ng services*/
+.box .content .price {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+/*button ng services*/
+.box .content .btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #27ae60;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background .3s ease;
+}
+/*animation ng "BOOK NOW"*/
+.box .content .btn:hover {
+  background: #2ecc71;
+}
+
+/*BACK BUTTON SA TAAS*/
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.back-btn {
+  color: #fff;  
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.back-btn i {
+  margin-right: 5px;
+}
+
+.title {
+  font-size: 32px;
+  color: #fff;
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* Media Query for smaller screen sizes */
+@media only screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

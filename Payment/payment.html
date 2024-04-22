@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Billing Address</title>
+</head>
+<body>
+    <a href="http://127.0.0.1:5500/399/BOOKINGS/bookings.html" class="back-btn">BACK</a> <!-- Moved the back button outside the container -->
+    <div class="container">
+        <form action="">
+            <div class="row">
+                <div class="col">
+                    <h3 class="title"><center>BILLING ADDRESS</center></h3>
+                    
+                    <div class="inputBox">
+                        <span>Email : </span>
+                        <input type="email" id="email" placeholder="justinBabaero@gmail.com">
+                        <span id="profanityWarning" style="display: none; color: red;">Please avoid using profane language.</span>
+                    </div>
+
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>Name : </span>
+                            <input type="text" placeholder="Amanda">
+                        </div>
+
+                        <div class="inputBox">
+                            <span>Middle Initial: </span>
+                            <input type="text" placeholder="Dela Cruz">
+                        </div>
+                        <div class="inputBox">
+                            <span>Surname: </span>
+                            <input type="text" placeholder="Dela Cruz">
+                        </div>
+                    </div>
+
+                    <div class="inputBox">
+                        <span>Address : </span>
+                        <input type="text" placeholder="123, Dagupan, Pangasinan">
+                    </div>
+
+                    <div class="inputBox">
+                        <span>Active Number : </span>
+                        <input type="number" placeholder="(+63) 9698775476">
+                    </div>
+                    
+                                       
+                    <div class="inputBox">
+                        <span>Name : </span>
+                        <input type="text" placeholder="Alden Richards">
+                    </div>
+
+                </div>
+            </div>
+            <a href="http://127.0.0.1:5500/399/Verification/index.html" class="submit-btn">CHECK OUT</a>
+        </form>
+    </div>
+
+    <script>
+        const profaneWords = ['justin@babaero.com', 'justin@mamamopanot.com', 'justin@abnoy.com', 'justinhindiminahal.com', 'justin@papasa.com'];
+
+        function containsProfanity(text) {
+            for (let word of profaneWords) {
+                if (text.toLowerCase().includes(word.toLowerCase())) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        document.getElementById('email').addEventListener('input', function() {
+            const email = this.value;
+
+            if (containsProfanity(email)) {
+                document.getElementById('profanityWarning').style.display = 'block';
+                this.value = '';
+            } else {
+                document.getElementById('profanityWarning').style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>
